@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="overflow-x-auto border drop-shadow-md">
+        <form method="post">
+            {% csrf_token %}
+            <table class="table w-full">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Job</th>
+                    <th>Status</th>
+                    <th>Created</th>
+                    <th>Completed</th>
+                    <th>
+                        <button class="btn btn-sm btn-outline btn-error " type="submit" name="action" value="delete">Delete</button>
+                        <button class="btn btn-sm btn-outline btn-success" type="submit" name="action" value="complete">Complete</button>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in tasks %}
+                    <tr>
+                        <td>#{{ i.id }}</td>
+                        <td class="{% if i.completed %}line-through{% endif %}">{{ i.title }}</td>
+                        <td>
+                            {% if i.completed == True %}
+                            {{ 'Completed' }}
+                            {% else %}
+                            {{ 'Not completed' }}
+                            {% endif %}
+                        </td>
+                        <td>{{ i.created_at|date:"d.m.Y" }}</td>
+                        <td>{{ i.updated_at|date:"d.m.Y" }}</td>
+                        <td class="">
+                            <input type="checkbox" name="_selected_action" value="{{ i.id }}">
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </form>
+    </div>
+{% endblock %}
