@@ -11,7 +11,8 @@ You will need django to be installed in you computer to run this app. Head over 
 
 Once you have downloaded django, go to the cloned repo directory and run the following command
 
-Create a virtual environment for this project. (.env)
+Create a virtual environment for this project.
+(create this file .env)
 ```bash
 export SECRET_KEY=your_secret_key
 export DEBUG=True
