@@ -7,12 +7,29 @@ To get this repository, run the following command inside your git enabled termin
 ```bash
 $ git clone https://github.com/NurlanPirjanov/todo.git
 ```
-You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
-
-Once you have downloaded django, go to the cloned repo directory and run the following command
 
 Create a virtual environment for this project.
-(create this file .env)
+
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment
+```bash
+venv\scripts\activate 
+```
+
+Now, navigate to the project directory
+```bash
+cd blog-app-teachers
+```
+
+Install the requirements for this project
+```bash
+pip install -r requirements.txt
+```
+
+Create this file .env
 ```bash
 export SECRET_KEY=your_secret_key
 export DEBUG=True
