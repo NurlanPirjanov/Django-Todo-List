@@ -5,7 +5,7 @@ A simple todo app built with django
 ### Setup
 To get this repository, run the following command inside your git enabled terminal
 ```bash
-$ git clone https://github.com/NurlanPirjanov/todo.git
+$ git clone "https://github.com/NurlanPirjanov/Django-Todo-List.git"
 ```
 
 Create a virtual environment for this project.
