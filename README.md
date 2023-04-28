@@ -21,7 +21,7 @@ venv\scripts\activate
 
 Now, navigate to the project directory
 ```bash
-cd blog-app-teachers
+cd Django-Todo-List
 ```
 
 Install the requirements for this project
